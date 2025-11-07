@@ -1,0 +1,54 @@
+{
+  "query": "디딤돌 대출 이름 지어진 년도",
+  "results": [
+    {
+      "title": "상품소개 | 디딤돌대출 | 주택담보대출",
+      "url": "http://www.hf.go.kr/ko/sub01/sub01_02_01.do",
+      "snippet": "대출한도 최대 2억원 · (생애최초 주택구입자 2.4억원, 신혼 · 2자녀 이상 가구는 3.2억원) · 대출만기 10년, 15년, 20년, 30년(거치기간은 1년 또는 비거치) · 원리금 균등, ...",
+      "raw": {
+        "position": 3,
+        "title": "상품소개 | 디딤돌대출 | 주택담보대출",
+        "link": "http://www.hf.go.kr/ko/sub01/sub01_02_01.do",
+        "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.hf.go.kr/ko/sub01/sub01_02_01.do&ved=2ahUKEwj61MzzvNyQAxUIrZUCHRRMNPYQFnoECCAQAQ",
+        "displayed_link": "http://www.hf.go.kr › sub01 › sub01_02_01",
+        "favicon": "https://serpapi.com/searches/690c0790f5c2f81171087bd0/images/92aeecd779c88afa9120578d7405a19ffaac0f9b9ac36aa6ff64e401724658c1.png",
+        "snippet": "대출한도 최대 2억원 · (생애최초 주택구입자 2.4억원, 신혼 · 2자녀 이상 가구는 3.2억원) · 대출만기 10년, 15년, 20년, 30년(거치기간은 1년 또는 비거치) · 원리금 균등, ...",
+        "snippet_highlighted_words": [
+          "대출",
+          "대출",
+          "년",
+          "년",
+          "년",
+          "년",
+          "년"
+        ],
+        "sitelinks": {
+          "inline": [
+            {
+              "title": "금리안내",
+              "link": "https://www.hf.go.kr/ko/sub01/sub01_02_03.do"
+            },
+            {
+              "title": "디딤돌대출",
+              "link": "https://www.hf.go.kr/ko/sub01/sub01_07_02.do"
+            },
+            {
+              "title": "신청절차",
+              "link": "https://www.hf.go.kr/ko/sub01/sub01_02_02.do"
+            },
+            {
+              "title": "내집마련 도우미",
+              "link": "https://www.hf.go.kr/ko/sub01/sub01_10_01.do"
+            }
+          ]
+        },
+        "missing": [
+          "이름",
+          "지어진"
+        ],
+        "source": "한국주택금융공사"
+      }
+    }
+  ],
+  "fetched_at": "2025-11-06T02:27:30.976658+00:00"
+}

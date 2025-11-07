@@ -8,18 +8,77 @@ TODO:
 
 from __future__ import annotations
 
-from fastapi import APIRouter
+from datetime import datetime, timezone
+import logging
 
-router = APIRouter(prefix="/admin", tags=["admin"])
+from fastapi import APIRouter, BackgroundTasks, Depends, Header, HTTPException, status
+
+from config.settings import Settings
+from src.api.schemas import HealthResponse, MetricsResponse, MetricsData
+from src.core.dependencies import get_settings
+from src.core.metrics import collect_metrics, mark_reindex
+from scripts.build_index import run_build_index
+
+router = APIRouter(prefix="/api/admin", tags=["admin"])
+
+logger = logging.getLogger(__name__)
 
 
-@router.post("/refresh")
-def trigger_refresh() -> dict[str, str]:
-    """TODO: 지식베이스 리프레시 작업을 트리거하세요."""
-    raise NotImplementedError("refresh 엔드포인트를 구현하세요.")
+def _require_admin_token(
+    settings: Settings = Depends(get_settings),
+    x_admin_token: str | None = Header(default=None, alias="X-Admin-Token"),
+) -> None:
+    if x_admin_token is None:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Admin token required")
+    if x_admin_token != settings.admin_secret.get_secret_value():
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid admin token")
 
 
-@router.get("/metrics")
-def read_metrics() -> dict[str, str]:
-    """TODO: 핵심 SLA/토큰 사용량 등을 반환하세요."""
-    raise NotImplementedError("metrics 엔드포인트를 구현하세요.")
+@router.get(
+    "/health",
+    response_model=HealthResponse,
+    response_model_exclude_none=True,
+    summary="관리자 헬스체크",
+)
+def read_health(_: None = Depends(_require_admin_token)) -> HealthResponse:
+    """기본 헬스체크 응답."""
+
+    # TODO(Iteration 4): core.responses.ok() 적용하여 공통 포맷으로 반환 고려
+    return HealthResponse(
+        timestamp=datetime.now(timezone.utc),
+        version="0.1.0",
+    )
+
+
+@router.post(
+    "/reindex",
+    status_code=status.HTTP_202_ACCEPTED,
+    summary="벡터 인덱스 재생성",
+)
+def trigger_reindex(
+    background_tasks: BackgroundTasks,
+    settings: Settings = Depends(get_settings),
+    _: None = Depends(_require_admin_token),
+) -> dict[str, str]:
+    """지식베이스 인덱스를 비동기로 재생성한다."""
+
+    def _task() -> None:
+        try:
+            run_build_index(settings=settings)
+            mark_reindex()
+        except Exception as exc:  # noqa: BLE001
+            logger.exception("reindex 작업 실패: %s", exc)
+
+    background_tasks.add_task(_task)
+    return {"status": "accepted"}
+
+
+@router.get(
+    "/metrics",
+    response_model=MetricsResponse,
+    summary="서비스 메트릭 조회",
+)
+def read_metrics(_: None = Depends(_require_admin_token)) -> MetricsResponse:
+    snapshot = collect_metrics()
+    data = MetricsData(**snapshot)
+    return MetricsResponse(data=data)

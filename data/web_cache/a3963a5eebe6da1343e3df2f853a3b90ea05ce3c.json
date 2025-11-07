@@ -1,0 +1,32 @@
+{
+  "query": "주택 담보 대출 승인 절차 알려줘",
+  "results": [
+    {
+      "title": "신청절차 | 디딤돌대출",
+      "url": "http://www.hf.go.kr/ko/sub01/sub01_02_02.do",
+      "snippet": "안내받으신 서류를 홈페이지(인터넷금융서비스), 스마트주택금융 어플, HF톡 내 간편서류 제출 기능을 통해 직접 서류를 업로드하시면 심사가 진행됩니다. 심사 및 승인.",
+      "raw": {
+        "position": 1,
+        "title": "신청절차 | 디딤돌대출",
+        "link": "http://www.hf.go.kr/ko/sub01/sub01_02_02.do",
+        "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://www.hf.go.kr/ko/sub01/sub01_02_02.do&ved=2ahUKEwjRq93oj9uQAxU66skDHUlwFI8QFnoECBwQAQ",
+        "displayed_link": "http://www.hf.go.kr › sub01 › sub01_02_02",
+        "favicon": "https://serpapi.com/searches/690b521099d5f45a550c871a/images/10c0c2fb9749984c6548d44780164fa1dd165982b8d994597aa70b8ce6df8530.png",
+        "snippet": "안내받으신 서류를 홈페이지(인터넷금융서비스), 스마트주택금융 어플, HF톡 내 간편서류 제출 기능을 통해 직접 서류를 업로드하시면 심사가 진행됩니다. 심사 및 승인.",
+        "snippet_highlighted_words": [
+          "주택",
+          "승인"
+        ],
+        "missing": [
+          "알려줘"
+        ],
+        "must_include": {
+          "word": "알려줘",
+          "link": "https://www.google.com/search?num=5&sca_esv=497cb87f152d986c&gl=kr&hl=ko&q=%EC%A3%BC%ED%83%9D+%EB%8B%B4%EB%B3%B4+%EB%8C%80%EC%B6%9C+%EC%8A%B9%EC%9D%B8+%EC%A0%88%EC%B0%A8+%22%EC%95%8C%EB%A0%A4%EC%A4%98%22&sa=X&ved=2ahUKEwjRq93oj9uQAxU66skDHUlwFI8Q5t4CegQIKxAB"
+        },
+        "source": "한국주택금융공사"
+      }
+    }
+  ],
+  "fetched_at": "2025-11-05T13:33:07.790274+00:00"
+}

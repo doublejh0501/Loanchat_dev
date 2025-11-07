@@ -1,20 +1,49 @@
-"""/calc 라우터.
-
-TODO:
-1. 계산 유형(enum)과 입력 스키마를 정의하세요.
-2. `src.compute.engine`의 계산 함수를 주입받아 실행하세요.
-3. 입력 검증 실패 시 사용자 친화적인 오류 메시지를 반환하세요.
-4. 계산 결과에 대한 단위/포맷을 명확히 정의하세요.
-"""
+"""/calc 라우터."""
 
 from __future__ import annotations
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
-router = APIRouter(prefix="/calc", tags=["calc"])
+from src.api.schemas import CalcRequest, CalcType, build_calc_response
+from src.core.exceptions import InvalidValueError
+from src.core.responses import ErrorResponse, SuccessResponse
+from src.services import ComputeService, get_compute_service
+
+router = APIRouter(prefix="/api/calc", tags=["calc"])
 
 
-@router.post("/")
-def calc_endpoint() -> dict[str, str]:
-    """TODO: 계산 엔진을 호출하고 결과를 반환하세요."""
-    raise NotImplementedError("calc 엔드포인트를 구현하세요.")
+@router.post(
+    "",
+    response_model=SuccessResponse,
+    response_model_exclude_none=True,
+    responses={
+        400: {"model": ErrorResponse},
+        422: {"model": ErrorResponse},
+        500: {"model": ErrorResponse},
+    },
+    summary="계산 엔드포인트",
+    description="calc_type에 따라 금융 계산을 수행합니다.",
+)
+def calc_endpoint(
+    payload: CalcRequest,
+    service: ComputeService = Depends(get_compute_service),
+) -> CalcResponse:
+    """계산형 요청을 처리한다."""
+
+    try:
+        calc_type = CalcType(payload.calc_type)
+    except ValueError as exc:
+        raise InvalidValueError(
+            "지원하지 않는 calc_type 입니다.",
+            field="calc_type",
+            details={"calc_type": payload.calc_type},
+        ) from exc
+
+    if payload.params is None:
+        raise InvalidValueError("params 필드가 필요합니다.", field="params")
+
+    result = service.calculate(calc_type=calc_type, params=payload.params)
+    return build_calc_response(calc_type=calc_type, data=result)
+
+
+__all__ = ["router"]

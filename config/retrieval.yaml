@@ -1,0 +1,23 @@
+chunk:
+  size: 800
+  overlap: 120
+  min_chars: 200
+vectorstore:
+  persist_directory: data/embeddings/chroma
+  collection_name: loan_documents
+reranker:
+  top_k: 5
+  score_key: score
+
+confidence:
+  min_score: 0.05
+  min_score_normalized: 0.2
+  min_hits: 1
+
+embedding:
+  provider: upstage
+  model_name: solar-embedding-1-large-query
+  batch_size: 16
+  api_base: https://api.upstage.ai/v1/embeddings
+  api_key: ${UPSTAGE_API_KEY}
+  timeout: 15

@@ -1,0 +1,32 @@
+{
+  "query": "주택금융공사에 추가 정보를 문의하면 될까?",
+  "results": [
+    {
+      "title": "개인정보처리방침",
+      "url": "https://www.hf.go.kr/ko/sub05/sub05_09_01_01.do",
+      "snippet": "한국주택금융공사는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 ...",
+      "raw": {
+        "position": 3,
+        "title": "개인정보처리방침",
+        "link": "https://www.hf.go.kr/ko/sub05/sub05_09_01_01.do",
+        "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.hf.go.kr/ko/sub05/sub05_09_01_01.do&ved=2ahUKEwjXzs6xjd2QAxXW_8kDHYjEEFQQFnoECBoQAQ",
+        "displayed_link": "https://www.hf.go.kr › sub05 › sub05_09_01_01",
+        "favicon": "https://serpapi.com/searches/690c5bf303610aec9a93e735/images/c07d21592157b26b8f9dffe6b3751605154fdb8527ea96944059981d2097c9af.png",
+        "snippet": "한국주택금융공사는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 ...",
+        "snippet_highlighted_words": [
+          "주택금융공사",
+          "정보를"
+        ],
+        "missing": [
+          "될까?"
+        ],
+        "must_include": {
+          "word": "될까?",
+          "link": "https://www.google.com/search?num=5&sca_esv=dded0198d961bc80&gl=kr&hl=ko&q=%EC%A3%BC%ED%83%9D%EA%B8%88%EC%9C%B5%EA%B3%B5%EC%82%AC%EC%97%90+%EC%B6%94%EA%B0%80+%EC%A0%95%EB%B3%B4%EB%A5%BC+%EB%AC%B8%EC%9D%98%ED%95%98%EB%A9%B4+%22%EB%90%A0%EA%B9%8C?%22&sa=X&ved=2ahUKEwjXzs6xjd2QAxXW_8kDHYjEEFQQ5t4CegQILBAB"
+        },
+        "source": "한국주택금융공사"
+      }
+    }
+  ],
+  "fetched_at": "2025-11-06T08:27:34.434328+00:00"
+}

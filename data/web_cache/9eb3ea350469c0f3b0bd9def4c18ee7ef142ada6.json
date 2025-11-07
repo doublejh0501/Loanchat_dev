@@ -1,0 +1,24 @@
+{
+  "query": "담보 가치 값이 어떻게 되나요?",
+  "results": [
+    {
+      "title": "[주택담보대출] 관련 Q&A",
+      "url": "https://www.fsc.go.kr/po020201/27351?srchCtgry=&curPage=6&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+      "snippet": "주택담보대출의 담보가치 산정 및 대출취급 가능 여부를 판단하는 시점은 차주의 '대출 신청일' 기준입니다.",
+      "raw": {
+        "position": 5,
+        "title": "[주택담보대출] 관련 Q&A",
+        "link": "https://www.fsc.go.kr/po020201/27351?srchCtgry=&curPage=6&srchKey=&srchText=&srchBeginDt=&srchEndDt=",
+        "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.fsc.go.kr/po020201/27351%3FsrchCtgry%3D%26curPage%3D6%26srchKey%3D%26srchText%3D%26srchBeginDt%3D%26srchEndDt%3D&ved=2ahUKEwiNqoLzmNuQAxW3tokEHenxHvMQFnoECBkQAQ",
+        "displayed_link": "https://www.fsc.go.kr › ...",
+        "snippet": "주택담보대출의 담보가치 산정 및 대출취급 가능 여부를 판단하는 시점은 차주의 '대출 신청일' 기준입니다.",
+        "snippet_highlighted_words": [
+          "담보",
+          "담보가치"
+        ],
+        "source": "금융위원회"
+      }
+    }
+  ],
+  "fetched_at": "2025-11-05T14:13:45.867444+00:00"
+}

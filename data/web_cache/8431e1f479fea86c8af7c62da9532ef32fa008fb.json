@@ -1,0 +1,25 @@
+{
+  "query": "아니 ltv의 정의가 뭐냐고",
+  "results": [
+    {
+      "title": "기호일보 경제용어(LTV, DTI) | 지역경제동향(상세)",
+      "url": "https://www.bok.or.kr/portal/bbs/P0000795/view.do?nttId=219646&menuNo=200557&searchBbsSeCd=z19&pageIndex=6",
+      "snippet": "LTV는 금융기관이 주택을 담보로 대출을 시행할 때 주택가격대비 대출 가능한 한도를 말한다. 예를 들어 LTV한도가 50%라면 시가 1억원짜리 아파트를 담보로 대출을 받을 ...",
+      "raw": {
+        "position": 4,
+        "title": "기호일보 경제용어(LTV, DTI) | 지역경제동향(상세)",
+        "link": "https://www.bok.or.kr/portal/bbs/P0000795/view.do?nttId=219646&menuNo=200557&searchBbsSeCd=z19&pageIndex=6",
+        "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.bok.or.kr/portal/bbs/P0000795/view.do%3FnttId%3D219646%26menuNo%3D200557%26searchBbsSeCd%3Dz19%26pageIndex%3D6&ved=2ahUKEwitprvUmNuQAxWkPDQIHWXAB2YQFnoECBoQAQ",
+        "displayed_link": "https://www.bok.or.kr › portal › bbs › view",
+        "snippet": "LTV는 금융기관이 주택을 담보로 대출을 시행할 때 주택가격대비 대출 가능한 한도를 말한다. 예를 들어 LTV한도가 50%라면 시가 1억원짜리 아파트를 담보로 대출을 받을 ...",
+        "snippet_highlighted_words": [
+          "LTV",
+          "LTV",
+          "가"
+        ],
+        "source": "한국은행"
+      }
+    }
+  ],
+  "fetched_at": "2025-11-05T14:12:41.780481+00:00"
+}

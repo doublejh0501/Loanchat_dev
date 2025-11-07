@@ -1,0 +1,26 @@
+{
+  "query": "금융감독원 본사 주소 알려줘",
+  "results": [
+    {
+      "title": "금융감독원",
+      "url": "https://www.fss.or.kr/",
+      "snippet": null,
+      "raw": {
+        "position": 1,
+        "title": "금융감독원",
+        "link": "https://www.fss.or.kr/",
+        "redirect_link": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.fss.or.kr/&ved=2ahUKEwjWu5jBlduQAxX6GbkGHbv5Hu4QFnoECBcQAQ",
+        "displayed_link": "https://www.fss.or.kr",
+        "missing": [
+          "알려줘"
+        ],
+        "must_include": {
+          "word": "알려줘",
+          "link": "https://www.google.com/search?num=5&sca_esv=497cb87f152d986c&hl=ko&gl=kr&q=%EA%B8%88%EC%9C%B5%EA%B0%90%EB%8F%85%EC%9B%90+%EB%B3%B8%EC%82%AC+%EC%A3%BC%EC%86%8C+%22%EC%95%8C%EB%A0%A4%EC%A4%98%22&sa=X&ved=2ahUKEwjWu5jBlduQAxX6GbkGHbv5Hu4Q5t4CegQIJRAB"
+        },
+        "source": "금융감독원"
+      }
+    }
+  ],
+  "fetched_at": "2025-11-05T13:58:35.930279+00:00"
+}
